@@ -22,7 +22,7 @@
           <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
         <!-- ZAČETEK: Ime vaše aplikacije -->
-        <a class="navbar-brand" href="index.html">{ime vaše aplikacije}</a>
+        <a class="navbar-brand" href="index.html">eZdravje</a>
         <!-- KONEC: Ime vaše aplikacije -->
       </div>
       <div class="collapse navbar-collapse" id="menujska-vrstica">
@@ -45,7 +45,18 @@
           </div>
           <div class="panel-body">
             <!-- ZAČETEK: Opis ideje, ki jo aplikacija podpira -->
-            <p><strong>TO-DO</strong>: Na tem mestu je potrebno dodati <strong>osnovni opis ideje rešitve</strong> (kakšen je osnovni SCENARIJ UPORABE, KDO je ciljna publika, za kakšen NAMEN se aplikacija uporablja).</p><p class="text-muted">Opis naj ne bo daljši od 200 besed.</p>
+            <p> <b>Osnovna ideja aplikacije</b> je uporabniku predstaviti njegov indeks telesne mase (ITM, angleško BMI, Body Mass Index). 
+            Za omenjeni indeks velja preprosta enačba, definirana kot telesna masa v kilogramih, deljena s kvadratom telesne višine v metrih. <br><br>
+            Ko <b>aplikacija pridobi njegove podatke</b>, mu na zanimiv način prikaže najbolj aktualen indeks v krogu, ki se obarva trenutni kategoriji primerno.
+            Uporabnik se s pomočjo tabele spodaj lahko seznani v katero kategorijo spada in se odzove temu primerno. 
+            Tabela razvršča vrednosti indeksa telesne mase po definiciji <b>Svetovne zdravstvene organizacije</b>. 
+            Torej, če se okvirček kroga obarva zeleno, potem je na pravi poti! 
+            Vendar naj nikar ne pozabi na zdravje in primerno prehrano, ki se prikazuje z objavami na desni strani ekrana. 
+            Iz njih lahko prebere najnovejše informacije, ki so povezane z zdravstvom in so objavljene na Twitterju s tako imenovanim »hashtag-om« Health. <br><br>
+            <b>Uporablja jo lahko prav vsak.</b> Vrednosti indeksa telesne mase so neodvisne od starosti, spola in etnične pripadnosti, torej je uporabna prav za vsakega Zemljana. <br>
+            <b>Aplikacija podpira tudi</b> pregledovanje starejših meritev in s tem lahko uporabnik ugotovi, ali se njegovo zdravstveno stanje pomika v pravo smer. <br><br>
+            Testirana je bila samo na brskalniku Chrome, tako da se lahko zgodi, da kje drugje ne bo delovala.
+            </p>
             <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
           </div>
         </div>
@@ -55,7 +66,12 @@
           </div>
           <div class="panel-body">
             <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
-            <p><strong>TO-DO</strong>: Na tem mestu je navesti zunanji vir podatkov (URL naslov), na kakšen način ste ga uporabili (neposredni API klic, uvožena statična datoteka ipd.) in kaj je bil namen uporabe (kako se vključuje v osnovno idejo aplikacije).</p>
+            <p>
+              Slika, ki prikazuje tabelo: <b>https://sl.wikipedia.org/wiki/Indeks_telesne_mase</b> in je uvožena.<br>
+              Namen uporabe: Uporabnik vidi, kaj pomeni barva, s katero se je obarval krog.<br><br>
+              Okno Twitter: <b>https://twitter.com/</b>  je vključen preko neposrednega API klica.<br>
+              Namen uporabe: Uporabnik se seznani z aktualnimi podatki o zdravstvu.
+            </p>
             <!-- KONEC: Uporabljeni zunanji viri podatkov -->
           </div>
         </div>
@@ -65,7 +81,8 @@
           </div>
           <div class="panel-body">
             <!-- ZAČETEK: Master/detail načrtovalski vzorec -->
-            <p><strong>TO-DO</strong>: Na tem mestu morate navesti uporabljen master/detail načrtovalski vzorec in na kakšen način ga nameravate uporabiti.</p>
+            Uporabnik lahko s seznama izbere iz seznama datumov, kadar so bile meritve upravljene.
+            S klikom na gumb se bo podatek ITM uskladil datumu, ki je bil izbran.
             <!-- KONEC: Master/detail načrtovalski vzorec -->
           </div>
         </div>
@@ -75,7 +92,7 @@
           </div>
           <div class="panel-body">
             <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
-            <p><strong>TO-DO</strong>: Na tem mestu je potrebno navesti uporabljeno tehniko vizualizacije podatkov (za pomoč lahko uporabite primer iz <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3.js galerije</a>) in zakaj je bila ta tehnika izbrana.</p>
+            <p><strong>D3 Liquid Fill Gauge</strong>: izbrana je bila zaradi meni osebno lepega izgleda in nazornega prikaza barve, ki je skladna z uporabnikovo kategorijo</p>
             <!-- KONEC: Uporabljeni zunanji viri podatkov -->
           </div>
         </div>

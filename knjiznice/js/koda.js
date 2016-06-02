@@ -175,15 +175,15 @@ function napisiEHRid(stPacienta) {
 	switch (stPacienta) {
 		case 1:
 			if (generiraniEHRid[0] != "") document.getElementById('EHRid').value=generiraniEHRid[0];
-			else document.getElementById('EHRid').value='836ca4e1-b5eb-4236-846d-38a345d10473';
+			else document.getElementById('EHRid').value='bb3e3c5d-c9a8-450b-a2ac-1b5f7ce8cbb9';
 			break;
 		case 2:
 			if (generiraniEHRid[1] != "") document.getElementById('EHRid').value=generiraniEHRid[1];
-			else document.getElementById('EHRid').value='31357fce-d0e0-43ca-8d46-5c5b2a3e37cc';
+			else document.getElementById('EHRid').value='480d5b24-d5e2-4ef3-b6ec-8f1592f63109';
 			break;
 		case 3:
 			if (generiraniEHRid[2] != "") document.getElementById('EHRid').value=generiraniEHRid[2];
-			else document.getElementById('EHRid').value='434ca484-8496-40ed-9c02-cdc24a3f2bfd';
+			else document.getElementById('EHRid').value='1787f0cf-c62d-48a8-9e0a-da75a968c6c4';
 			break;
 	}
 }
@@ -281,12 +281,12 @@ function generirajMeritveVitalnihZnakov(stPacienta, ehrId) {
         	dodajMeritveVitalnihZnakov(ehrId, "2007-04-24T13:12", "176.7", "75", "36.9", "124", "84", "97");
         	dodajMeritveVitalnihZnakov(ehrId, "2009-07-15T11:45", "176.7", "78", "37.5", "133", "80", "98");
         	dodajMeritveVitalnihZnakov(ehrId, "2011-11-13T09:33", "176.7", "74", "36.2", "111", "86", "94");
-        	dodajMeritveVitalnihZnakov(ehrId, "2015-05-01T16:08", "176.7", "80", "36.4", "121", "88", "92");
+        	dodajMeritveVitalnihZnakov(ehrId, "2015-05-01T16:08", "176.7", "73", "36.4", "121", "88", "92");
 			break;
 		case 2:
-			dodajMeritveVitalnihZnakov(ehrId, "2005-01-11T07:17", "119.5", "28", "36.2", "128", "81", "96");
-        	dodajMeritveVitalnihZnakov(ehrId, "2007-04-24T13:12", "134.7", "31", "36.4", "124", "81", "97");
-        	dodajMeritveVitalnihZnakov(ehrId, "2009-07-15T11:45", "147.7", "34", "37.1", "120", "80", "98");
+			dodajMeritveVitalnihZnakov(ehrId, "2005-01-11T07:17", "119.5", "42", "36.2", "128", "81", "96");
+        	dodajMeritveVitalnihZnakov(ehrId, "2007-04-24T13:12", "134.7", "43", "36.4", "124", "81", "97");
+        	dodajMeritveVitalnihZnakov(ehrId, "2009-07-15T11:45", "147.7", "40", "37.1", "120", "80", "98");
         	dodajMeritveVitalnihZnakov(ehrId, "2011-11-13T09:33", "158.7", "38", "36.6", "121", "82", "96");
         	dodajMeritveVitalnihZnakov(ehrId, "2015-05-01T16:08", "161.7", "41", "36.7", "123", "79", "98");
 			break;
