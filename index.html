@@ -4,12 +4,27 @@
   <meta charset="utf-8">
   <title>eZdravje :: 4. DN :: OIS 2015/2016</title>
   <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <style>
     body {padding-top: 70px;}
+    path { 
+        stroke: steelblue;
+        stroke-width: 2;
+        fill: none;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: grey;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
   </style>
   <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
   <script src="knjiznice/js/bootstrap.min.js"></script>
   <script src="knjiznice/js/koda.js"></script>
+  <script src="knjiznice/js/liquidFillGauge.js"></script>
 </head>
 <body>
 
@@ -22,14 +37,14 @@
           <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
         <!-- ZAČETEK: Ime vaše aplikacije -->
-        <a class="navbar-brand" href="index.html">{ime vaše aplikacije}</a>
+        <a class="navbar-brand" href="index.html">eZdravje</a>
         <!-- KONEC: Ime vaše aplikacije -->
       </div>
       <div class="collapse navbar-collapse" id="menujska-vrstica">
         <ul class="nav navbar-nav">
           <li><a href="opis.html">Opis ideje</a></li>
           <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
-          <li><a href="#">Generiranje podatkov</a></li>
+          <li><a href="javascript:generirajVse();">Generiranje podatkov</a></li>
         </ul>
       </div>
     </div>
@@ -37,12 +52,55 @@
   <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
 
   <!-- ZAČETEK: Vsebina aplikacije -->
+  <div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <p class="lead"><strong>TO-DO</strong>: Na tem mestu implementirajte vašo aplikacijo.</p>
+			<div class="col-lg-8 col-md-8 col-sm-8">
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <div class="row">
+			        <div style="padding-left:15px;"><b>Izberi uporabnika:</b></div>
+			      </div>
+			    </div>
+			      <div class="panel-body">
+			        <div class="dodajUporabnika">
+			          <button type="button" class="btn" onclick="napisiEHRid(1)">Franci Balanci</button>, 
+			          <button type="button" class="btn" onclick="napisiEHRid(2)">Anica Trivik</button>,
+			          <button type="button" class="btn" onclick="napisiEHRid(3)">Joža Nedeljko</button> 
+			          <br>
+			          <span class="label label-default">EHR ID</span><input id="EHRid" type="text" class="form-control input-mini" placeholder="dc61cd0f-29af-4487-b08e-c1b3bd4d2ee5">
+			          <button type="button" class="btn btn-primary btn-xs" onclick="pridobiPodatke();">Pridobi meritve in pokaži trenutni ITM</button> <br>
+			          <div class="panel-heading">
+			            <select class="form-control input-sm" id="datumi"></select>
+			            <button type="button" class="btn btn-primary btn-xs" onclick="parametriZaDoločenDatum()">Pokaži ITM določenega datuma</button>
+			          </div>
+			        </div>
+			      </div>
+			  </div>
       </div>
-    </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <div class="row">
+			        <div style="padding-left:15px;"><b>Obvestila:</b></div>
+			      </div>
+			    </div>
+			      <div class="panel-body" style="height: 213px; overflow-y: scroll;">
+			        <span id="novoObvestilo"></span>
+			      </div>
+			  </div>
+      </div>
+      <div class="row">
+        <div if="size" class="col-lg-8 col-md-8 col-sm-8">
+          <svg id="fillgauge1" class="aGraph"></svg>
+          <div id="datum"></div>
+          <img src="kategorijeITM.png" height="300" width="700">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <a class="twitter-timeline" href="https://twitter.com/hashtag/health" data-widget-id="738051843297796098">#health Tweets</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+      </div>
   </div>
   <!-- KONEC: Vsebina aplikacije -->
 
