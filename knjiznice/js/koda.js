@@ -27,7 +27,6 @@ function getSessionId() {
 
 function pridobiPodatke() {
 	var sessionId = getSessionId();
-	
 	$("#datumi").empty();
 
 	var ehrId = $("#EHRid").val();
@@ -106,7 +105,7 @@ function pridobiPodatke() {
 }
 
 function parametriZaDoločenDatum() {
-	st = $("#datumi").val();
+	var st = $("#datumi").val();
 	if (st == null) $("#novoObvestilo").append("<span class='obvestilo label label-warning " +
       "fade-in'>Prosim kliknite na željen datum!</span><br>");
     else {
@@ -116,18 +115,6 @@ function parametriZaDoločenDatum() {
 }
 
 function narisiGraf(height, weight, time)  {
-/*	dataset = [];
-	
-	for (i = allHeights.length-1; i >= 0; i--) {
-		times[i] = new Date(times[i].split("-")[0],times[i].split("-")[1], times[i].split("-")[2]);
-		var tmp = {
-			date: times[i],
-			value: allWeights[i]*10000/(allHeights[i]*allHeights[i])
-		};
-		dataset.push(tmp);
-		$("#novoObvestilo").append("<span class='obvestilo " +
-		"label label-success'>BMI: " + dataset[i] + "</span><br>");
-	}*/
 	$("#fillgauge1").empty();
 	
 	var itm = weight*10000/(height*height);
@@ -268,9 +255,6 @@ function generirajPodatke(stPacienta) {
 	        });
 	    }
 	});
-
-  // TODO: Potrebno implementirati
-
   return ehrId;
 }
 
